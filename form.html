@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>my form
+ </title>
+<link rel="stylesheet" type="text/css" href="stylesnew.css"/>
+
+</head>
+<body>
+<script LANGUAGE="JavaScript" type="text/javascript">
+    function displayFormInfo() {
+
+        DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
+        message = "<ul><b>Please Verify info</b>"
+        message += "<li><b>First Name: </b>" + document.customform.firstName.value;
+        message += "<li><b>Last Name: </b>" + document.customform.lastName.value;
+        message += "<li><b>City: </b>" + document.customform.city.value;
+        message += "<li><b>Email: </b>" + document.customform.email.value + "</ul>";
+        DispWin.document.write(message);
+    }
+</script>
+<div id="container">
+  <div id="header">
+      <img src="images/logo.png" alt="logo image" width=100 height=50>
+ 
+
+               
+                <h1>My Page </h1>
+  </div>
+
+  <div id="navigation">
+
+	</div>
+<div id="sidebar">
+			<h3>
+				side Bar
+			</h3>
+
+
+		</div>
+
+  <div id="content">
+             <h1>Submit the form to see javascript confirmation window</h1>
+      <form name="customform" id="form" onsubmit="return formValidation()" method="post">
+          <fieldset>
+              <legend>Form</legend>
+
+              <div>
+                  <div class="pure">
+                      <label for="first-name">First Name</label>
+                      <input name="firstName" id="first-name" type="text" required>
+                  </div>
+                  <br/>
+                  <div class="pure">
+                      <label for="last-name">Last Name</label>
+                      <input name="lastName" id="last-name" type="text" required>
+                  </div>
+                  <br/>
+                  <div class="pure">
+                      <label for="email">E-Mail</label>
+                      <input id="email" type="email" required>
+                  </div>
+                  <br/>
+                  <div class="pure">
+                      <label for="city">City</label>
+                      <input id="city" type="text" required>
+                  </div>
+                  <br/>
+                  <div class="pure">
+                      <label for="state">State</label>
+                      <select id="state" class="pure-input-1-2" required>
+                          <option>AL</option>
+                          <option>CA</option>
+                          <option>IL</option>
+                          <option>FL</option>
+                          <option>NY</option>
+                          <option>TX</option>
+                          <option>CO</option>
+                          <option>WA</option>
+                          <option>MA</option>
+                      </select>
+                  </div>
+              </div>
+              <br/>
+              <button type="submit" class="pure-button pure-button-primary" onclick="displayFormInfo()">Submit</button>
+          </fieldset>
+      </form>
+   
+  </div> 
+
+
+	<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+  <div id="footer">
+  <center>
+      Copyright &copy
+  </center>
+  </div>
+
+</div>
+</body>
+</html>
